@@ -81,11 +81,10 @@ function question5(answer) {
         (finalscore += 20);
         console.log(finalscore);
         localStorage.setItem("score", finalscore);
-        $(".question5").hide();
-        document.location.href = "C:\Users\Stephan\Pictures\Course\Steph-s-Amazing-Javascript-Quiz\finalscore.html"
-    } else {
-        $(".question5").hide();
         document.location.href = "file:///C:/Users/Stephan/Pictures/Course/Steph-s-Amazing-Javascript-Quiz/finalscore.html"
+    } else {
+        document.location.href = "file:///C:/Users/Stephan/Pictures/Course/Steph-s-Amazing-Javascript-Quiz/finalscore.html"
+       
     }
 }
 
