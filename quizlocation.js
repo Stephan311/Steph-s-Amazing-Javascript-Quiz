@@ -12,6 +12,7 @@ var finalscore = 0;
 //function to store correct answer score to local storage
 
 function question1(answer) {
+    
     console.log(answer);
     if (parseInt(answer) === 20) {
         (finalscore += 20);
@@ -28,6 +29,7 @@ function question1(answer) {
 
 //stores answers into local storage for Q2
 function question2(answer) {
+    // debugger;
     console.log(answer);
     if (parseInt(answer) === 20) {
         (finalscore += 20);
@@ -80,8 +82,10 @@ function question5(answer) {
         console.log(finalscore);
         localStorage.setItem("score", finalscore);
         $(".question5").hide();
+        document.location.href = "C:\Users\Stephan\Pictures\Course\Steph-s-Amazing-Javascript-Quiz\finalscore.html"
     } else {
         $(".question5").hide();
+        document.location.href = "file:///C:/Users/Stephan/Pictures/Course/Steph-s-Amazing-Javascript-Quiz/finalscore.html"
     }
 }
 
