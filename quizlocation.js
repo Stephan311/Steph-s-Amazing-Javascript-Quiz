@@ -7,6 +7,8 @@ var wrong = 0;
 
 var finalscore = 0;
 
+
+
 //function to store correct answer score to local storage
 
 function question1(answer) {
@@ -15,6 +17,11 @@ function question1(answer) {
         (finalscore += 20);
         console.log(finalscore);  
         localStorage.setItem("score", finalscore);
+        $(".question1").hide();
+        $(".question2").addClass("show");
+    } else {
+        $(".question1").hide();
+        $(".question2").addClass("show");
     }
 
 }
@@ -26,6 +33,11 @@ function question2(answer) {
         (finalscore += 20);
         console.log(finalscore);
         localStorage.setItem("score", finalscore);
+        $(".question2").hide();
+        $(".question3").addClass("show");
+    } else {
+        $(".question2").hide();
+        $(".question3").addClass("show");
     }
 
 }
@@ -37,6 +49,11 @@ function question3(answer) {
         (finalscore += 20);
         console.log(finalscore);
         localStorage.setItem("score", finalscore);
+        $(".question3").hide();
+        $(".question4").addClass("show");
+    } else {
+        $(".question3").hide();
+        $(".question4").addClass("show");
     }
 }
 
@@ -47,6 +64,11 @@ function question4(answer) {
         (finalscore += 20);
         console.log(finalscore);
         localStorage.setItem("score", finalscore);
+        $(".question4").hide();
+        $(".question5").addClass("show");
+    } else {
+        $(".question4").hide();
+        $(".question5").addClass("show");
     }
 }
 
@@ -57,6 +79,9 @@ function question5(answer) {
         (finalscore += 20);
         console.log(finalscore);
         localStorage.setItem("score", finalscore);
+        $(".question5").hide();
+    } else {
+        $(".question5").hide();
     }
 }
 
