@@ -7,3 +7,10 @@ color: white;
     text-align: center;
     margin-top: 300px;
 }
+
+.highscoresection {
+    text-decoration: none;
+    margin-top: -340px;
+    text-align: center;
+    color: white;
+}
