@@ -1,3 +1,9 @@
 body {
 background-color: black;
+color: white;
+}
+
+.openingsection {
+    text-align: center;
+    margin-top: 300px;
 }
