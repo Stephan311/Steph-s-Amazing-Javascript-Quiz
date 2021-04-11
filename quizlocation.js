@@ -1,11 +1,37 @@
 console.log("hi")
 
-
 //variables for correct and incorrect questions
 // var correct = 20;
 var wrong = 0;
 
 var finalscore = 0;
+//function that counts down time
+
+var display = 0;
+
+//20 seconds deducted for a wrong question;
+
+
+function quizTimer(duration, display) {
+    var quizTimer1 = duration, seconds;
+    setInterval(function () { 
+        seconds = parseInt(quizTimer1 % 60, 10);
+
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = "Time Left: " + seconds;
+
+        if (--quizTimer1 < 0) {
+           document.location.href = "file:///C:/Users/Stephan/Pictures/Course/Steph-s-Amazing-Javascript-Quiz/finalscore.html";
+        }
+    }, 1000)
+}
+
+window.onload = function() {
+    var oneminute = 60,
+    display = document.querySelector("#seconds");
+    quizTimer(oneminute, display);
+};
 
 
 
@@ -21,6 +47,9 @@ function question1(answer) {
         $(".question1").hide();
         $(".question2").addClass("show");
     } else {
+        debugger
+        (display -= 20);
+        console.log(display);
         $(".question1").hide();
         $(".question2").addClass("show");
     }
@@ -88,4 +117,3 @@ function question5(answer) {
     }
 }
 
-localStorage.setItem("score", finalscore);
