@@ -4,7 +4,8 @@ In this program, my goal was to create a quiz that tests basic JS knowledge that
 
 Screenshot:
 
-\![revetttttt](https://user-images.githubusercontent.com/76667667/114328985-39689480-9b0c-11eb-90b3-2524b2dafef9.JPG) 
+![revetttttt](https://user-images.githubusercontent.com/76667667/114329078-7e8cc680-9b0c-11eb-8d47-533a8a4ec2c7.JPG)
+
 
 Repo URL: https://github.com/Stephan311/Steph-s-Amazing-Javascript-Quiz
 
