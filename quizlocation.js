@@ -3,23 +3,36 @@ console.log("hi")
 //variables for correct and incorrect questions
 // var correct = 20;
 var wrong = 0;
+var globalseconds = 0;
+var foo = 0;
 
 var finalscore = 0;
+
+var seconds = 60;
+
+var oneminute = 0;
+
 //function that counts down time
-
-var display = 0;
-
-//20 seconds deducted for a wrong question;
-
-
 function quizTimer(duration, display) {
     var quizTimer1 = duration, seconds;
     setInterval(function () { 
+        debugger;
         seconds = parseInt(quizTimer1 % 60, 10);
+       // if (quizTimer1 == 0) {
+       //     seconds = 60;
+       // }
 
-        seconds = seconds < 10 ? "0" + seconds : seconds;
+        if (foo == 1) {
+            seconds -= 20;
+            quizTimer1 -= 20;
+            foo = 0;
+        }
 
+        globalseconds = seconds;
+
+        // Log seconds to HTML
         display.textContent = "Time Left: " + seconds;
+        console.log(seconds);
 
         if (--quizTimer1 < 0) {
            document.location.href = "file:///C:/Users/Stephan/Pictures/Course/Steph-s-Amazing-Javascript-Quiz/finalscore.html";
@@ -28,17 +41,18 @@ function quizTimer(duration, display) {
 }
 
 window.onload = function() {
-    var oneminute = 60,
+    oneminute = 60,
     display = document.querySelector("#seconds");
     quizTimer(oneminute, display);
 };
 
 
-
 //function to store correct answer score to local storage
 
 function question1(answer) {
-    
+   
+    debugger;
+    console.log(globalseconds);
     console.log(answer);
     if (parseInt(answer) === 20) {
         (finalscore += 20);
@@ -47,8 +61,7 @@ function question1(answer) {
         $(".question1").hide();
         $(".question2").addClass("show");
     } else {
-        debugger
-        (display -= 20);
+        foo = 1;
         console.log(display);
         $(".question1").hide();
         $(".question2").addClass("show");
@@ -67,6 +80,7 @@ function question2(answer) {
         $(".question2").hide();
         $(".question3").addClass("show");
     } else {
+        foo = 1;
         $(".question2").hide();
         $(".question3").addClass("show");
     }
@@ -83,6 +97,7 @@ function question3(answer) {
         $(".question3").hide();
         $(".question4").addClass("show");
     } else {
+        foo = 1;
         $(".question3").hide();
         $(".question4").addClass("show");
     }
@@ -98,6 +113,7 @@ function question4(answer) {
         $(".question4").hide();
         $(".question5").addClass("show");
     } else {
+        foo = 1;
         $(".question4").hide();
         $(".question5").addClass("show");
     }
