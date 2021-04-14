@@ -35,7 +35,7 @@ function quizTimer(duration, display) {
         console.log(seconds);
 
         if (--quizTimer1 < 0) {
-           document.location.href = "https://github.com/Stephan311/Steph-s-Amazing-Javascript-Quiz/blob/main/finalscore.html";
+           document.location.href = "finalscore.html";
         }
     }, 1000)
 }
@@ -126,9 +126,9 @@ function question5(answer) {
         (finalscore += 20);
         console.log(finalscore);
         localStorage.setItem("score", finalscore);
-        document.location.href = "https://github.com/Stephan311/Steph-s-Amazing-Javascript-Quiz/blob/main/finalscore.html"
+        document.location.href = "finalscore.html"
     } else {
-        document.location.href = "https://github.com/Stephan311/Steph-s-Amazing-Javascript-Quiz/blob/main/finalscore.html"
+        document.location.href = "finalscore.html"
        
     }
 }
